@@ -30,7 +30,6 @@ const mapStateToProp = (state, props) => {
     const scores = state.deck.scores.sort((a, b) => {
         return b.score - a.score
     });
-    console.log(scores);
     return {...props, scores: scores};
 };
 

@@ -11,7 +11,7 @@ const App = ({countGame, winnerName}) => {
     if (countGame === 5) {
         setTimeout(() => {
             alert(winnerName + ' is winner today!!!');
-            // window.location.reload();
+            window.location.reload();
         }, 500);
     }
     return (

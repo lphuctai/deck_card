@@ -129,7 +129,6 @@ export default function deckReducer(state = initState, action) {
             let result = [];
             stateTmp.players.map((player) => {
                 let total = player.cards.reduce((sum = 0, item) => {
-                    console.log(sum);
                     return (sum + item.value) % 10
                 }, 0);
                 let boots = player.cards.reduce((sum, item) => {
@@ -165,8 +164,7 @@ export default function deckReducer(state = initState, action) {
                 let winnerId = [];
                 let winnerName = [];
                 let max = 0;
-                console.log(stateTmp.scores);
-                for (let i = 0; i < stateTmp.scores[i].length; i++) {
+                for (let i = 0; i < stateTmp.scores.length; i++) {
                     if (stateTmp.scores[i].score > max) {
                         max = stateTmp.scores[i].score;
                     }

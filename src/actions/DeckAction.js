@@ -17,7 +17,6 @@ const shuffleCardInit = () => {
 };
 
 export const shuffleCardDone = (data) => {
-    console.log(data);
     return {
         type: type.SHUFFLE_DECK_DONE,
         payload: {...data}
