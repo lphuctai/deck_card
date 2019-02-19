@@ -54,5 +54,5 @@ import C_QS from '../resources/img/QS.svg';
 import C_SPADE from '../resources/img/spade.svg';
 
 export default {
-    C_0C, C_0C2, C_0D, C_0H, C_0S, C_2C, C_2D, C_2H, C_2S, C_3C, C_3D, C_3H, C_3S, C_4C, C_4D, C_4H, C_4S, C_5C, C_5D, C_5H, C_5S, C_6C, C_6D, C_6H, C_6S, C_7C, C_7D, C_7H, C_7S, C_8C, C_8D, C_8H, C_8S, C_9C, C_9D, C_9H, C_9S, C_AC, C_AD, C_AH, C_AS, C_JC, C_JD, C_JH, C_JS, C_KC, C_KD, C_KH, C_KS, C_QC, C_QD, C_QH, C_QS, C_SPADE
+    // C_0C, C_0C2, C_0D, C_0H, C_0S, C_2C, C_2D, C_2H, C_2S, C_3C, C_3D, C_3H, C_3S, C_4C, C_4D, C_4H, C_4S, C_5C, C_5D, C_5H, C_5S, C_6C, C_6D, C_6H, C_6S, C_7C, C_7D, C_7H, C_7S, C_8C, C_8D, C_8H, C_8S, C_9C, C_9D, C_9H, C_9S, C_AC, C_AD, C_AH, C_AS, C_JC, C_JD, C_JH, C_JS, C_KC, C_KD, C_KH, C_KS, C_QC, C_QD, C_QH, C_QS, C_SPADE
 };
