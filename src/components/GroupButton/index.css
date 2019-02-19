@@ -1,3 +1,9 @@
 .GroupButtonError {
     color: red;
 }
+
+.Button {
+    width: 100%;
+    min-width: 95px;
+    margin-bottom: 10px;
+}

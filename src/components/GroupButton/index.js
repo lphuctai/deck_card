@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
 
-import * as deckAction from '../../actions/DeckAction'
+import * as deckAction from '../../actions/DeckAction';
+import './index.css';
 
 const GroupButton = ({deck_id, errorMessage, shuffleStatus, drawStatus, shuffleCard, revealCard, drawCard}) => {
     return (
@@ -9,24 +10,34 @@ const GroupButton = ({deck_id, errorMessage, shuffleStatus, drawStatus, shuffleC
             <div>
                 <p className="GroupButtonError">{errorMessage}</p>
             </div>
-            {
-                shuffleStatus === 'view' ?
-                    (<button className="btn btn-success" onClick={() => {
-                        shuffleCard()
-                    }}>Shuffler</button>) :
-                    (<button className="btn btn-success" disabled>Shuffling</button>)
-            }
-            {
-                drawStatus === 'view' ?
-                    (<button className="btn btn-primary" onClick={() => {
-                        drawCard(deck_id)
-                    }}>Draw</button>) :
-                    (<button className="btn btn-primary" disabled>Drawing</button>)
-            }
-            <button className="btn btn-danger" disabled={deck_id ? '' : 'disabled'} onClick={() => {
-                revealCard()
-            }}>Reveal
-            </button>
+            <div className="row">
+                <div className="col-sm-6">
+                    {
+                        shuffleStatus === 'view' ?
+                            (<button className="Button btn btn-success" onClick={() => {
+                                shuffleCard()
+                            }}>Shuffler</button>) :
+                            (<button className="Button btn btn-success" disabled>Shuffling</button>)
+                    }
+                </div>
+                <div className="col-sm-6">
+                    {
+                        drawStatus === 'view' ?
+                            (<button className="Button btn btn-primary" onClick={() => {
+                                drawCard(deck_id)
+                            }}>Draw</button>) :
+                            (<button className="Button btn btn-primary" disabled>Drawing</button>)
+                    }
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-sm-12">
+                    <button className="Button btn btn-danger" disabled={deck_id ? '' : 'disabled'} onClick={() => {
+                        revealCard()
+                    }}>Reveal
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

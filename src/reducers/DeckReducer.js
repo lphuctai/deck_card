@@ -45,10 +45,12 @@ const initState = {
     drawStatus: 'view',
     errorMessage: '',
     countGame: 0,
-    winnerName: ''
+    winnerName: '',
+    modals: []
 };
 
 export default function deckReducer(state = initState, action) {
+    const tmpState = JSON.parse(JSON.stringify(state));
     switch (action.type) {
         case type.SHUFFLE_DECK:
             return {
@@ -56,7 +58,6 @@ export default function deckReducer(state = initState, action) {
                 shuffleStatus: 'fetching'
             };
         case type.SHUFFLE_DECK_DONE:
-            const tmpState = JSON.parse(JSON.stringify(state));
             tmpState.players.map(player => {
                 player.cards = [];
                 return player;
@@ -175,13 +176,37 @@ export default function deckReducer(state = initState, action) {
                     }
                 }
                 for (let i = 0; i < stateTmp.players.length; i++) {
-                    if (winerId.indexOf(stateTmp.players[i].id) !== -1) {
+                    if (winnerId.indexOf(stateTmp.players[i].id) !== -1) {
                         winnerName.push(stateTmp.players[i].name);
                     }
                 }
                 stateTmp.winnerName = winnerName.join(', ');
             }
             return {...state, ...stateTmp};
+        case type.OPEN_MODAL_RESULT:
+            return {
+                ...state,
+                modals: state.modals.concat(action.obj)
+            };
+        case type.CLOSE_MODAL_RESULT:
+            tmpState.players.map(player => {
+                player.cards = [];
+                return player;
+            });
+            tmpState.countGame = 0;
+            tmpState.deck_id = '';
+            tmpState.players.map(player => {
+                player.cards = [];
+                return player;
+            });
+            tmpState.scores.map(score => {
+                score.score = 0;
+                return score;
+            });
+            tmpState.deck_id = '';
+            tmpState.shuffleStatus = 'view';
+            tmpState.errorMessage = '';
+            return {...state, ...tmpState};
         default:
             return state
     }

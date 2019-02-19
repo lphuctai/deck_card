@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import './index.css';
 
 const ScoreTable = ({scores}) => {
     return (
         <div>
-            <table className="table table-bordered">
+            <table className="ScoreTable table table-bordered">
                 <thead>
                 <tr>
                     <th>Name</th>

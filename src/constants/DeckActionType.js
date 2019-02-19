@@ -7,3 +7,6 @@ export const DRAW_DECK_DONE = 'DRAW_DESK_DONE';
 export const DRAW_DECK_ERROR = 'DRAW_DESK_ERROR';
 
 export const REVEAL_DECK = 'REVEAL_DESK';
+
+export const OPEN_MODAL_RESULT = 'OPEN_MODAL_RESULT';
+export const CLOSE_MODAL_RESULT = 'CLOSE_MODAL_RESULT';

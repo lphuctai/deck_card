@@ -24,7 +24,6 @@ export const shuffleCardDone = (data) => {
 };
 
 export const shuffleCardError = (message) => {
-    console.warn(message);
     return {
         type: type.SHUFFLE_DECK_ERROR,
         payload: message
@@ -71,4 +70,18 @@ export const revealCard = () => {
     return {
         type: type.REVEAL_DECK
     };
+};
+
+
+
+export const openModal = () => {
+    return {
+        type: type.CLOSE_MODAL_RESULT,
+    }
+};
+
+export const closeModal = () => {
+    return {
+        type: type.CLOSE_MODAL_RESULT,
+    }
 };

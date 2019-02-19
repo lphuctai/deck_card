@@ -1,0 +1,24 @@
+.fade.in {
+    opacity: 1;
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+
+    margin: 2px auto;
+    z-index: 1100 !important;
+}
+
+.modal-backdrop .fade .in {
+    opacity: 0.5 !important;
+}
+
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+
+.Pannel {
+    height: 80%;
+}
