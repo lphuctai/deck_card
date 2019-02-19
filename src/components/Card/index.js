@@ -7,6 +7,17 @@ import './index.css'
 const Card = ({card}) => {
     return (
         <div className="Card">
+            {
+                card.status === 'view' ? (
+                    <img className="CardImageShow"
+                         src={'/resources/img/' + card.type + '.png'}
+                         alt={'Card ' + card.type}/>
+                ) : (
+                    <img className="CardImageHide"
+                         src="/resources/img/spade.png"
+                         alt="Back Card" />
+                )
+            }
             <img className={card.status === 'view' ? 'CardImageShow' : 'CardImageHide'}
                 src={card.status === 'view' ? '/resources/img/' + card.type + '.png' : '/resources/img/spade.png'}
                  alt={card.status === 'view' ? 'Card ' + card.type : 'Back Card'}/>
