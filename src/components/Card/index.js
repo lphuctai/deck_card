@@ -5,7 +5,6 @@ import './index.css'
 
 
 const Card = ({card}) => {
-    console.log(card.status);
     return (
         <div className="Card">
             <img className={card.status === 'view' ? 'CardImageShow' : 'CardImageHide'}

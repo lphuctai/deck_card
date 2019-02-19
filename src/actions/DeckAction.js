@@ -69,5 +69,13 @@ export const drawCardError = (message) => {
 };
 
 export const revealCard = () => {
-
+    return {
+        type: type.REVEAL_DECK
+    };
 };
+
+export const showResult = () => {
+    return {
+        type: type.SHOW_RESULT
+    }
+}

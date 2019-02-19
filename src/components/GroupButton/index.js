@@ -23,7 +23,7 @@ const GroupButton = (props) => {
                     }}>Draw</button>) :
                     (<button className="btn btn-primary" disabled>Drawing</button>)
             }
-            <button className="btn btn-danger" onClick={() => {
+            <button className="btn btn-danger" disabled={props.deck_id ? '' : 'disabled'} onClick={() => {
                 props.revealCard()
             }}>Reveal
             </button>
