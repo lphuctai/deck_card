@@ -8,10 +8,10 @@ import GroupButton from "../../components/GroupButton";
 
 
 const App = ({countGame, winnerName}) => {
-    if(countGame === 5) {
+    if (countGame === 5) {
         setTimeout(() => {
             alert(winnerName + ' is winner today!!!');
-            window.location.reload();
+            // window.location.reload();
         }, 500);
     }
     return (
@@ -43,7 +43,7 @@ const App = ({countGame, winnerName}) => {
 };
 
 const mapStateToProp = (state, props) => {
-    return { ...props, ...state.deck};
+    return {...props, ...state.deck};
 };
 
 export default connect(mapStateToProp)(App)

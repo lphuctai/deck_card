@@ -61,7 +61,7 @@ export default function deckReducer(state = initState, action) {
                 player.cards = [];
                 return player;
             });
-            if(tmpState.countGame === 5) {
+            if (tmpState.countGame === 5) {
                 tmpState.countGame = 0;
                 tmpState.deck_id = '';
                 tmpState.players.map(player => {
@@ -160,23 +160,24 @@ export default function deckReducer(state = initState, action) {
                 }
                 return score;
             });
-            stateTmp.countGame ++;
-            if(stateTmp.countGame === 5) {
+            stateTmp.countGame++;
+            if (stateTmp.countGame === 5) {
                 let winnerId = [];
                 let winnerName = [];
                 let max = 0;
-                for(let i = 0; i < stateTmp.scores[i].score.length; i ++) {
-                    if(stateTmp.scores[i].score > max) {
+                console.log(stateTmp.scores);
+                for (let i = 0; i < stateTmp.scores[i].length; i++) {
+                    if (stateTmp.scores[i].score > max) {
                         max = stateTmp.scores[i].score;
                     }
                 }
-                for(let i = 0; i < stateTmp.scores.length; i ++) {
-                    if(stateTmp.scores[i].score === max) {
+                for (let i = 0; i < stateTmp.scores.length; i++) {
+                    if (stateTmp.scores[i].score === max) {
                         winnerId.push(stateTmp.scores[i].id);
                     }
                 }
-                for(let i = 0; i < stateTmp.players.length; i ++) {
-                    if(winerId.indexOf(stateTmp.players[i].id) !== -1) {
+                for (let i = 0; i < stateTmp.players.length; i++) {
+                    if (winerId.indexOf(stateTmp.players[i].id) !== -1) {
                         winnerName.push(stateTmp.players[i].name);
                     }
                 }

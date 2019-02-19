@@ -1,6 +1,6 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 import './index.css';
 import Card from '../Card';
@@ -10,7 +10,7 @@ const Player = ({id, name, cards}) => {
         <div className="Player" data-id={id}>
             <div className="PlayerCards">
                 {cards.map(card => (
-                    <Card card={card} />
+                    <Card card={card}/>
                 ))}
             </div>
             <div className="PlayerName">
@@ -34,7 +34,7 @@ Player.propTypes = {
 
 const mapStateToProps = (state, props) => {
     const player = state.deck.players.filter(player => player.id === props.id)[0];
-    return { ...props, ...player};
+    return {...props, ...player};
 };
 
 export default connect(mapStateToProps)(Player);
