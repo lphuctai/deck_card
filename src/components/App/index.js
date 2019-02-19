@@ -5,36 +5,29 @@ import GroupButton from "../../components/GroupButton";
 
 
 const App = () => (
-    <div>
-      <table className="AppLayout">
-        <tbody>
-        <tr>
-          <td/>
-          <td>
-            <Player id={1} />
-          </td>
-          <td/>
-        </tr>
-        <tr>
-          <td>
-            <Player id={2} />
-          </td>
-          <td/>
-          <td>
-            <Player id={3} />
-          </td>
-        </tr>
-        <tr>
-          <td/>
-          <td>
-            <Player id={4} />
-          </td>
-          <td/>
-        </tr>
-        </tbody>
-      </table>
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-3 col-sm-offset-3">
+          <Player id={0} />
+        </div>
+        <div className="col-sm-3 col-sm-offset-3">
+          <GroupButton/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-3">
+          <Player id={1} />
+        </div>
+        <div className="col-sm-3 col-sm-offset-3">
+          <Player id={2} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-3 col-sm-offset-3">
+          <Player id={3} />
+        </div>
+      </div>
 
-      <GroupButton/>
     </div>
 );
 

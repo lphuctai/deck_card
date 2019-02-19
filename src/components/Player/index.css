@@ -1,0 +1,28 @@
+.Player {
+    border: 1px solid black;
+    border-radius: 31px 31px 30px 30px;
+    height: 280px;
+    width: 280px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.PlayerCards {
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 30px 30px 0 0;
+    height: 90%;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.PlayerCards > div:first-child {
+    margin-left: 0 !important;
+}
+
+.PlayerName {
+    padding: 3px;
+    height: 10%;
+    width: 100%;
+}
