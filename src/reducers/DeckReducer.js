@@ -184,8 +184,6 @@ export default function deckReducer(state = initState, action) {
                 stateTmp.winnerName = winnerName.join(', ');
             }
             return {...state, ...stateTmp};
-        case type.SHOW_RESULT:
-
         default:
             return state
     }

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
+import image from '../../constants/CardImage.js';
 import './index.css'
+
 
 
 const Card = ({card}) => {
@@ -10,11 +12,11 @@ const Card = ({card}) => {
             {
                 card.status === 'view' ? (
                     <img className="CardImageShow"
-                         src={'/resources/img/' + card.type + '.png'}
+                         src={image['C_' + card.type]}
                          alt={'Card ' + card.type}/>
                 ) : (
                     <img className="CardImageHide"
-                         src="/resources/img/spade.png"
+                         src={image.C_SPADE}
                          alt="Back Card"/>
                 )
             }

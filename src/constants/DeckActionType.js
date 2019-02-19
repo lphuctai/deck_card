@@ -7,5 +7,3 @@ export const DRAW_DECK_DONE = 'DRAW_DESK_DONE';
 export const DRAW_DECK_ERROR = 'DRAW_DESK_ERROR';
 
 export const REVEAL_DECK = 'REVEAL_DESK';
-
-export const SHOW_RESULT = 'SHOW_RESULT';
