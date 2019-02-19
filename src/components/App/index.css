@@ -1,0 +1,11 @@
+.AppLayout {
+  width: 980px;
+  height: 900px;
+  margin: 0 auto;
+}
+
+.AppLayout td {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}

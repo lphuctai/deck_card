@@ -1,0 +1,9 @@
+export const SHUFFLE_DECK = 'SHUFFLE_DESK';
+export const SHUFFLE_DECK_DONE = 'SHUFFLE_DESK_DONE';
+export const SHUFFLE_DECK_ERROR = 'SHUFFLE_DESK_ERROR';
+
+export const DRAW_DECK = 'DRAW_DESK';
+export const DRAW_DECK_DONE = 'DRAW_DESK_DONE';
+export const DRAW_DECK_ERROR = 'DRAW_DESK_ERROR';
+
+export const REVEAL_DECK = 'REVEAL_DESK';
