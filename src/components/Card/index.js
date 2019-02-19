@@ -15,12 +15,9 @@ const Card = ({card}) => {
                 ) : (
                     <img className="CardImageHide"
                          src="/resources/img/spade.png"
-                         alt="Back Card" />
+                         alt="Back Card"/>
                 )
             }
-            <img className={card.status === 'view' ? 'CardImageShow' : 'CardImageHide'}
-                src={card.status === 'view' ? '/resources/img/' + card.type + '.png' : '/resources/img/spade.png'}
-                 alt={card.status === 'view' ? 'Card ' + card.type : 'Back Card'}/>
         </div>
     );
 };
